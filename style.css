@@ -20,10 +20,14 @@ html {
     line-height: 1.5em;
     background-color: var(--bgColor);
 }
-header {
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+#pageHeader {
     background-color: var(--headerBgColor);
     color: var(--headerTxtColor);
-    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,6 +45,7 @@ nav a:visited {
     padding: 1em;
 }
 #menu ul li {
+    font-size: large;
     display: inline;
     margin: 0 0.8em;
     width: 20%;
@@ -51,7 +56,7 @@ nav a:visited {
 header #title {
     content: url('Resources/logo.jpg');
     padding: 0.3em;
-    margin: 0 1.5em;
+    margin-right: 1.5em;
     width: 8em;
 }
 main {
@@ -59,31 +64,38 @@ main {
     padding: 3em;
     margin: auto;
     width: 60%;
+    height: fit-content;
 }
 footer {
     background-color: var(--footerBgColor);
     color: var(--footerTxtColor);
-    padding: 1em;
+    padding: 1em 0;
     text-align: center;
-    position: fixed;
-    bottom: 0;
+    margin-top: auto;
+}
+.stepSection {
     width: 100%;
+    border: 2px solid white;
+    margin-bottom: 1.5em;
 }
-table {
-    width: 100%;
+.stepSection .stepHeader, #tools header {       
+    padding: 0.4em 0;
+    background-color: var(--headerBgColor);
+    color: var(--headerTxtColor);
+    text-align: center;
 }
-th {
-    border: 0.1em solid var(--txtColor);
-    border-top-right-radius: var(--borderRadius);
-    border-top-left-radius: var(--borderRadius);
-    background-color: white;
-    color: black;
+.stepSection .stepHeader h2, #tools header h2 {
+    font-weight: 600;
+    font-size: 1.4em;
 }
-td {
+.sectionContent {
     padding: 1em;
-    border-bottom-right-radius: var(--borderRadius);
-    border-bottom-left-radius: var(--borderRadius);
-    border: 0.1em solid var(--txtColor);
+}
+.category {
+    font-size: 1.2em;
+}
+.subcategory {
+    font-size: 1em;
 }
 .docList {
     padding-left: 2em;
@@ -114,6 +126,14 @@ ul {
     display: grid;
     grid-template-columns: repeat(2, minmax(15em, 15em));
     padding: 0;
+}
+#aboutSection, #tools {
+    width: 100%;
+    border: 2px solid white;
+    margin-bottom: 1.5em;
+}
+#aboutSection > * {
+    padding: 1em;
 }
 .centerize {
     margin: auto;
@@ -188,18 +208,19 @@ ul {
         transform: translateY(-10px);
     }
 }
-section {
-    padding-bottom: 1em;
+.sectionContent section:not(:last-of-type) {
+    padding-bottom: 1.2em;
 }
 #tools {
     margin: auto;
     text-align: center;
+    width: 100%;
 }
 #tools p {
     padding: 1em;
 }
 #toolList {
-    padding: 0;
+    padding: 1.2em 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -214,7 +235,7 @@ section {
     list-style-type: none;
 }
 #componenti {
-    padding: 0;
+    padding: 1em 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -233,4 +254,18 @@ section {
 }
 .alert i {
     vertical-align: middle;
+}
+
+@media screen and (max-width: 850px) {
+    #menu ul li {
+        display: block;
+        margin: 1em 0;
+    }
+    main {
+        width: 90%;
+        padding: 3em 0;
+    }
+    #toolList {
+        flex-direction: column;        
+    }
 }
