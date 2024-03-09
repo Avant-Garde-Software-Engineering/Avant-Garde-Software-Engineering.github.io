@@ -166,8 +166,8 @@ ul {
     position: relative;
 }
 #cover {
-    width: 400px;
-    height: 400px;
+    width: 35vw;
+    height: auto;
     display: block;
     margin: auto;
     border-radius: 15px;
@@ -291,5 +291,8 @@ ul {
     header #title {
         background-image: url('Resources/logo_small.jpg');
         width: 2em;
+    }
+    #cover {
+        width: 85vw;
     }
 }
