@@ -106,11 +106,7 @@ footer {
     list-style-type: none;
 }
 a {
-    text-decoration: none;
     color: var(--linkColor);
-}
-a:hover {
-    text-decoration: underline;
 }
 ul {
     padding-left: 2em;
@@ -274,6 +270,19 @@ ul {
 }
 .sectionContent p, .sectionContent ul {
     margin-bottom: 1em;
+}
+.update {
+    margin: auto;
+    margin-bottom: 2em;
+    padding: 1em;
+    border: 2px dashed white;
+    border-radius: 10px;
+    width: fit-content;
+}
+.update img {
+    display: block;
+    margin: auto;
+    margin-bottom: 0.5em;
 }
 
 @media screen and (max-width: 850px) {
