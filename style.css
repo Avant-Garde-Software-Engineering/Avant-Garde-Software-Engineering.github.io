@@ -284,6 +284,10 @@ ul {
     margin: auto;
     margin-bottom: 0.5em;
 }
+.update a {
+    display: block;
+    text-align: center;
+}
 
 @media screen and (max-width: 850px) {
     #menu ul li {
